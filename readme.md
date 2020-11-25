@@ -12,24 +12,24 @@ User-bot interaction data from April 1st, 2020 to April 30th, 2020 is used in th
 
 First off, as there is a certain designed pattern of bot utterances, the most common bot prompts can be grouped into different categories that can be the “signal prompts” that later imply varied user response styles. Currently, 4 types of signal are identified:
 
-1. [Greeting] Bot greeting user, such as:
+1. <b>[Greeting]</b> Bot greeting user, such as:
 
    > “Hi, this is an Alexa Prize Socialbot. Good evening! Hello there”  
    > “Hi, this is an Alexa Prize Socialbot. Good afternoon! Glad to talk to you!”
 
-2. [Emotion] Bot asking for user current emotion status, such as:
+2. <b>[Emotion]</b> Bot asking for user current emotion status, such as:
 
    > “Hi, this is an Alexa Prize Socialbot. How are you today?”  
    > “No problem. I said, How are you today?”
 
-3. [Next-topic] Bot asking users for next topic to talk about, such as:
+3. <b>[Next-topic]</b> Bot asking users for next topic to talk about, such as:
 
-   > “Thank you <user name>. Any topic interests you? We can talk about music, movies, and I can also tell jokes!”  
-   > “Thank you <user name>. What would you like to chat about? Many people share what's going on in their life.”
+   > “Thank you [user name]. Any topic interests you? We can talk about music, movies, and I can also tell jokes!”  
+   > “Thank you [user name]. What would you like to chat about? Many people share what's going on in their life.”
 
-4. [Plan] Bot asking users for the plans they have, such as:
-   > “Great! Glad to get to know you, <username>! What's your plan for today?”  
-   > “Nice to connect with you again, <username>! What are you doing this weekend?”
+4. <b>[Plan]</b> Bot asking users for the plans they have, such as:
+   > “Great! Glad to get to know you, [username]! What's your plan for today?”  
+   > “Nice to connect with you again, [username]! What are you doing this weekend?”
 
 Then, according to categorize bot prompts, each conversation is organized in a manner that the user (first) response is treated as an individual data point towards a specific bot prompt category. For example, for user A, his/her conversation with bot will be recorded as A’s first responses towards each 4 categories of bot prompts.  
 Also, conversational metadata has been considered as parameters as well. These 9 parameters can be quantified either directly or indirectly with machine learning algorithms, which include :
