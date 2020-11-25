@@ -14,21 +14,21 @@ First off, as there is a certain designed pattern of bot utterances, the most co
 
 1. [Greeting] Bot greeting user, such as:
 
-   > “Hi, this is an Alexa Prize Socialbot. Good evening! Hello there”
+   > “Hi, this is an Alexa Prize Socialbot. Good evening! Hello there”  
    > “Hi, this is an Alexa Prize Socialbot. Good afternoon! Glad to talk to you!”
 
 2. [Emotion] Bot asking for user current emotion status, such as:
 
-   > “Hi, this is an Alexa Prize Socialbot. How are you today? ”  
+   > “Hi, this is an Alexa Prize Socialbot. How are you today?”  
    > “No problem. I said, How are you today?”
 
 3. [Next-topic] Bot asking users for next topic to talk about, such as:
 
-   > “Thank you <user name>. Any topic interests you? We can talk about music, movies, and I can also tell jokes!.”
-   > “Thank you <user name>. What would you like to chat about? Many people share what's going on in their life..”
+   > “Thank you <user name>. Any topic interests you? We can talk about music, movies, and I can also tell jokes!”  
+   > “Thank you <user name>. What would you like to chat about? Many people share what's going on in their life.”
 
 4. [Plan] Bot asking users for the plans they have, such as:
-   > “Great! Glad to get to know you, <username>! What's your plan for today?”
+   > “Great! Glad to get to know you, <username>! What's your plan for today?”  
    > “Nice to connect with you again, <username>! What are you doing this weekend?”
 
 Then, according to categorize bot prompts, each conversation is organized in a manner that the user (first) response is treated as an individual data point towards a specific bot prompt category. For example, for user A, his/her conversation with bot will be recorded as A’s first responses towards each 4 categories of bot prompts.  
@@ -96,8 +96,8 @@ Setting the first layer neuron size as D, input as the raw embedding and meta da
 
 7 autoencoder models are trained, with first layer neuron size as 140, 200, 260, 320, 380, 440, and 500 representing different levels of compression/denoise of the original data. Here is the loss comparison among different models
 
-![image](nn_compare_1.png)  
-![image](nn_compare_2.png)
+![image](pics/nn_compare_1.png)  
+![image](pics/nn_compare_2.png)
 
 ### Self-organizing Map
 
@@ -107,9 +107,9 @@ Self-organizing map (SOM) is an artificial neural network algorithm that achieve
 
 Firstly, 20\*20 elements were generated and evenly distributed in the map, each of these elements was a vector that had the same dimension as the raw data points. Then, in the competition process, each data point would be compared to the elements in the map, and the element which was the closest (in euclidean distance) to the data point was found as the winner element. The winning elements determine the spatial location of a topological neighbourhood, thereby providing the basis for cooperation/adaptation among neighbouring elements, pushing all neighbours towards the data point from the training set.
 
-![image](som_equation.png)  
-![image](som_1.png)
-![image](som_2.png)
+![image](pics/som_equation.png)  
+![image](pics/som_1.png)
+![image](pics/som_2.png)
 
 ## K-means clustering and Cluster evaluation
 
@@ -128,5 +128,5 @@ After the k-means clustering, the key problem is how to choose the best number o
 2 versions of the dunn index were calculated, one based on the original (raw) embedding data set, which contained 419 parameters. The other is based on the compressed data sets, which means the parameter counts varied in different compression models.
 The PCA method performed the best when calculating based on the raw embedding dataset, with k == 12; while the Autoencoder model with 200 neurons in the first layer performed the best. With k == 6.
 
-![image](dunn_1.png)
-![image](dunn_2.png)
+![image](pics/dunn_1.png)
+![image](pics/dunn_2.png)
