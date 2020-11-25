@@ -64,7 +64,8 @@ To tackle the first and second challenges, 3 different methods were used, they a
 1. traditional machine learning approach - principal component analysis;
 2. simple neural network approach - autoencoder neural network model;
 3. and artificial neural network approach - self-organizing map.
-   To tackle the third challenge, the mean vectors were calculated separately in each bot prompt category, then filled into the NAs.
+
+To tackle the third challenge, the mean vectors were calculated separately in each bot prompt category, then filled into the NAs.
 
 ### Principal Component Analysis
 
@@ -105,7 +106,7 @@ Setting the first layer neuron size as D, input as the raw embedding and meta da
 
 Self-organizing map (SOM) is an artificial neural network algorithm that achieves dimensional reduction in an unsupervised way. SOM reduced the original data to a 2-dimensional map, and displays the similarities among data.
 
-Firstly, 20\*20 elements were generated and evenly distributed in the map, each of these elements was a vector that had the same dimension as the raw data points. Then, in the competition process, each data point would be compared to the elements in the map, and the element which was the closest (in euclidean distance) to the data point was found as the winner element. The winning elements determine the spatial location of a topological neighbourhood, thereby providing the basis for cooperation/adaptation among neighbouring elements, pushing all neighbours towards the data point from the training set.
+Firstly, 20\*20 elements were generated and evenly distributed in the map, each of these elements was a vector that had the same dimension as the raw data points. Then, in the competition process, each data point would be compared to the elements in the map, and the element which was the closest (in euclidean distance) to the data point was found as the winner element. The winning elements determine the spatial location of a topological neighborhood, thereby providing the basis for cooperation/adaptation among neighboring elements, pushing all neighbors towards the data point from the training set.
 
 ![image](pics/som_equation.png)  
 ![image](pics/som_1.png)
