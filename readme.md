@@ -70,3 +70,23 @@ Firstly, 20\*20 elements were generated and evenly distributed in the map, each 
 ![image](som_equation.png)  
 ![image](som_1.png)
 ![image](som_2.png)
+
+## K-means clustering and Cluster evaluation
+
+---
+
+During the clustering process, sklearn kmeans package is used, with 10 times of the k-means algorithm run with different centroid seeds, and 300 as the maximum number of iterations of the k-means algorithm for a single run. K-means algorithm is utilized with different k ranging from 2-55. 5 different models are used in data compression:
+
+1. PCA model- 80% variance kept
+2. Autoencoder model - first layer size == 200
+3. Autoencoder model - first layer size == 380
+4. SOM model - raw embedded data set
+5. SOM model - PCA processed data set
+
+After the k-means clustering, the key problem is how to choose the best number of clusters K and the best method of data compression. Dunn index, which is a widely used way in cluster evaluation that measures the distance among clusters (Peter Rousseeuw, 1987), was calculated to measure the best K.
+
+2 versions of the dunn index were calculated, one based on the original (raw) embedding data set, which contained 419 parameters. The other is based on the compressed data sets, which means the parameter counts varied in different compression models.
+The PCA method performed the best when calculating based on the raw embedding dataset, with k == 12; while the Autoencoder model with 200 neurons in the first layer performed the best. With k == 6.
+
+![image](dunn_1.png)
+![image](dunn_2.png)
